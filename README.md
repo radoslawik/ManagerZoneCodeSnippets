@@ -20,4 +20,4 @@ No więc, najtrudniejsza część: odpalamy Chrome (inna przeglądarka też zadz
 
 ![image](https://github.com/radoslawik/ManagerZoneCodeSnippets/assets/55437425/e41a96b1-211c-4293-85af-3a62b194c6b7)
 
-Prostymi słowami, co 15 minut (można sobie ustawić inną wartość) skrypt zostanie wykonany i jeśli w danym momencie bilety są dostępne do pobrania, to zostaną pobrane. To chyba tyle z mojej strony, jeśli natraficie na jakieś problemy albo macie jakieś pytania to dajcie znać! Ostatnia rzecz, kiedy będziecie dzielić się z kimś tą instrukcją, zadawać pytania, wrzucać screeny, pamiętajcie żeby <b>NIE</b> pokazywać waszych danych logowania. Cheers!
+Prostymi słowami, co 15 minut (można sobie ustawić inną wartość) skrypt zostanie wykonany i jeśli w danym momencie bilety są dostępne do pobrania, to zostaną pobrane. Po zakończeniu eventu wyzwalacz można usunąć. To chyba tyle z mojej strony, jeśli natraficie na jakieś problemy albo macie jakieś pytania to dajcie znać! Ostatnia rzecz, kiedy będziecie dzielić się z kimś tą instrukcją, zadawać pytania, wrzucać screeny, pamiętajcie żeby <b>NIE</b> pokazywać waszych danych logowania. Cheers!
