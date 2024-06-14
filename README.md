@@ -4,7 +4,7 @@ Repo with combined Google Apps Script code snippets to make ManagerZone more fri
 ## 1. Automatyczne pobieranie biletów eventowych
 Logowanie się co kilka godzin po to aby kliknąć jeden przycisk? Pff, już nie. Wystarczy tylko konto Google aby bilety automatycznie pojawiały się na waszych kontach. No więc zaczynamy:
 1. Wejdź na https://script.google.com/home/start i zaloguj się (przy pierwszym uruchomieniu trzeba kliknąć start scripting).
-2. Utwórz nowy projekt i skopiuj zawartość pliku `EventTickets.gs` do edytora.
+2. Utwórz nowy projekt, usuń domyślne linijki kodu (z funkcją MyFunction) i skopiuj zawartość pliku `EventTickets.gs` do edytora.
 3. Teraz najbardziej skomplikowana część instrukcji. Aby pobrać bilet trzeba być zalogowanym, a że w żądaniu https używane jest hasło po enkrypcji, trzeba je jakoś znaleźć.
 
 <b>UWAGA</b>: Notka dotycząca cyber bezpieczeństwa - wszystkie żądania https będą wysyłane poprzez Google Apps Script, czyli w praktyce Google będzie miało dostęp do waszych zaszyfrowanych haseł w ManagerZone. Co może złego się stać? W teorii ktoś z Google może się zalogować na wasze konto MZ i zrobić jakieś złe rzeczy, ale w praktyce... Google ma gdzieś wasze konta MZ :) Jednak jeśli dalej macie jakieś wątpliwości, nie musicie kontynuować!
