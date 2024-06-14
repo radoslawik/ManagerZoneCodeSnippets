@@ -1,6 +1,33 @@
 var Username = "PasteYourUsernameHereBetweenAposthrophes";
 var EncryptedPassword = "PasteYourEncryptedPasswordHereBetweenAposthrophes";
 
+function GetEventTickets()
+{
+  var phpSessionId = GeneratePHPSESSID();
+
+  if(LoginToManagerZone(phpSessionId) != 200)
+  {
+    throw "Failed to login";
+  }
+
+  var eventUrl = "https://www.managerzone.com/ajax.php?p=event&sub=claim&sport=soccer";
+  var options = 
+  { 
+    "method": "get",
+    "headers" : {
+      "Cookie" : "PHPSESSID=" + phpSessionId + "; MZLANG=pl; MZLOGIN=2"
+    },
+  };
+  var response = UrlFetchApp.fetch(eventUrl, options);
+  var responseCode = response.getResponseCode();
+
+  if(responseCode != 200)
+  {
+    throw "Failed to get event tickets";
+  }
+  return "Success";
+}
+
 function LoginToManagerZone(phpSessionId)
 {
   var url = "https://www.managerzone.com/?p=login";
@@ -32,31 +59,4 @@ function GeneratePHPSESSID()
     charId += String.fromCharCode(97 + Math.random()*10);
   } 
   return charId;  
-}
-
-function GetEventTickets()
-{
-  var phpSessionId = GeneratePHPSESSID();
-
-  if(LoginToManagerZone(phpSessionId) != 200)
-  {
-    throw "Failed to login";
-  }
-
-  var eventUrl = "https://www.managerzone.com/ajax.php?p=event&sub=claim&sport=soccer";
-  var options = 
-  { 
-    "method": "get",
-    "headers" : {
-      "Cookie" : "PHPSESSID=" + phpSessionId + "; MZLANG=pl; MZLOGIN=2"
-    },
-  };
-  var response = UrlFetchApp.fetch(eventUrl, options);
-  var responseCode = response.getResponseCode();
-
-  if(responseCode != 200)
-  {
-    throw "Failed to get event tickets";
-  }
-  return "Success";
 }
