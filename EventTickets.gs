@@ -43,7 +43,7 @@ function GetEventTickets()
     throw "Failed to login";
   }
 
-  var eventUrl = https://www.managerzone.com/ajax.php?p=event&sub=claim&sport=soccer";
+  var eventUrl = "https://www.managerzone.com/ajax.php?p=event&sub=claim&sport=soccer";
   var options = 
   { 
     "method": "get",
